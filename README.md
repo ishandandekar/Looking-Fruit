@@ -46,6 +46,6 @@ I appreciate reviews and criticism. If you find any errors (even a typo!) and/or
 - [ ] Make notebook
 - [ ] Beautify notebook
 - [ ] Add 'Open in colab' button
-- [ ] Add dataset to Kaggle
-- [ ] Beautify Kaggle dataset (desc etc.)
+- [x] Add dataset to Kaggle
+- [x] Beautify Kaggle dataset (desc etc.)
 - [ ] Update README
