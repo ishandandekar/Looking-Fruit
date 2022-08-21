@@ -26,3 +26,15 @@ def plot_loss_curves(history):
     plt.title('Accuracy')
     plt.xlabel('Epochs')
     plt.legend();
+
+import zipfile
+
+def unzip_data(filename,data_dir="data"):
+    """
+    Unzips filename into the current working directory.
+    Args:
+        filename (str): a filepath to a target zip folder to be unzipped.
+    """
+    zip_ref = zipfile.ZipFile(filename, "r")
+    zip_ref.extractall(data_dir)
+    zip_ref.close()
