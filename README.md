@@ -16,8 +16,7 @@ applications that could use such classifier.
 
 ## Introduction
 
-Computer Vision domain has always been my curiosity. I did this project when Andrew Ng (famous machine learning teacher) said that it is important to replicate and understand state-of-the-art models.
-
+Computer Vision domain has always been my curiosity. I thought paper replication was a great start to then replicate state-of-the-art models like ResNets.
 The **objective** of the research paper was to classify images various fruits and vegetables correctly. The researchers made a total of 10 models based and documented there results. The main of this project is to beat and/or achieve the highest score on the test set when compared to their best model.
 
 ## Data
