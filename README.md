@@ -16,4 +16,4 @@ applications that could use such classifier.
 
 ## Introduction
 
-In this paper, the people made a dataset from scratch (i.e. took the images themselves). In the paper they used this dataset to classify images of fruits, using the Tensorflow. Each model achieved 100% accuracy on the training set.
+In this paper, the people made a dataset from scratch (i.e. took the images themselves). In the paper they used this dataset to classify images of fruits, using the Tensorflow. Each model achieved 100% accuracy on the training set. To classify images, I used the Tensorflow library (just like the people who did the paper) to make neural networks which classify the images.
