@@ -38,6 +38,7 @@ I appreciate reviews and criticism. If you find any errors (even a typo!) and/or
 - _assets_ : various media materials which were helpful for the project.
 - _.gitignore_ : this file was used to make `git` not track certain private files.
 - _helper_functions.py_ : python script containing various utility functions which were used during the modelling experiments.
+- _Looking_Fruit_nbk_ : jupyter/colab notebook used for this project. The notebook also describes the models and approach.
 - _README.md_ : documentation of the project.
 
 #### TODO:
