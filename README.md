@@ -25,7 +25,7 @@ The original data for the paper was published and created by the researchers the
 
 For my ease-of-use I uploaded the dataset available on Github to Kaggle, and used this for the project. Check out the dataset [here](https://www.kaggle.com/datasets/ishandandekar/fruitimagedataset) and do try making models yourself!
 
-> :bulb: Check out the original dataset: [Github](https://github.com/Horea94/Fruit-Images-Dataset) [Kaggle](https://www.kaggle.com/datasets/moltean/fruits)
+> :bulb: Check out the original dataset via : [Github](https://github.com/Horea94/Fruit-Images-Dataset) [Kaggle](https://www.kaggle.com/datasets/moltean/fruits)
 
 ## Approach and Models
 
