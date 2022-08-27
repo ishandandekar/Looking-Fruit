@@ -19,6 +19,10 @@ applications that could use such classifier.
 
 ## Data
 
+<p align="center>
+    <img width=300 height=170 src="assets/data_sample.png">
+</p>
+
 The original data for the paper was published and created by the researchers themselves. The dataset contains a total of around 90,000 images of **131** fruits and vegetables. The data is then split into two sets: training and testing sets. This test set contains almost 25% of the total dataset.
 
 For my ease-of-use I uploaded the dataset available on Github to Kaggle, and used this for the project. Check out the dataset [here](https://www.kaggle.com/datasets/ishandandekar/fruitimagedataset) and do try making models yourself!
