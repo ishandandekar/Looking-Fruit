@@ -19,25 +19,23 @@ applications that could use such classifier.
 
 ## Data
 
-<p align="center>
-    <img width=300 height=170 src="assets/data_sample.png">
-</p>
+The original data for the paper was published and created by the researchers themselves. The dataset contains a total of around **90,000** images of **131** fruits and vegetables. The data is then split into two sets: training and testing sets. This test set contains almost 25% of the total dataset.  
+The training data has around **400+ images for each class** (except Ginger Root). Although, the model would get generalised more on more data, but due to unnecessarily huge size of the dataset, it was trimmed for training the models better. Further, data augmentation was performed to make the model make better predictions on new images.
+The test data was kept separately untouched, and was used just to evaluate the models on unknown data. Each class had around **100+** images. This data was not augmented.
 
-The original data for the paper was published and created by the researchers themselves. The dataset contains a total of around 90,000 images of **131** fruits and vegetables. The data is then split into two sets: training and testing sets. This test set contains almost 25% of the total dataset.
-
-For my ease-of-use I uploaded the dataset available on Github to Kaggle, and used this for the project. Check out the dataset [here](https://www.kaggle.com/datasets/ishandandekar/fruitimagedataset) and do try making models yourself!
+For my ease-of-use I uploaded the original dataset available on Github to Kaggle, and used this for the project. Check out the dataset [here](https://www.kaggle.com/datasets/ishandandekar/fruitimagedataset) and do try making models yourself!
 
 > :bulb: Check out the original dataset via : [Github](https://github.com/Horea94/Fruit-Images-Dataset) [Kaggle](https://www.kaggle.com/datasets/moltean/fruits)
 
 ## Models
 
-1. **Model 0:**
-1. **Model 1:**
-1. **Model 2:**
-1. **Model 3:**
-1. **Model 4:**
-1. **Model 5:**
-1. **Model 6:**
+1. **Model 0** : A simple model with fully connected multiple Dense layers; this model acts as a baseline.
+1. **Model 1** : 2 pairs of CNN and MaxPool layers with a Flatten layer and Dense layer in the end for classification.
+1. **Model 2** : Multiple CNN layers, MaxPool layers with a Flatten layer and Dense layer in the end; _should get better results from this._
+1. **Model 3** : Using transfer learning, exploit ResNet model for classification.
+1. **Model 4** : Using transfer learning, exploit EfficientNetBx for classification.
+1. **Model 5** : Use fine-tuned ResNet model for classification.
+1. **Model 6** : Use fine-tuned EfficientNetBx for classification.
 
 ## Contents of the repository
 
