@@ -56,7 +56,7 @@ Looking_Fruit/
 
 ## Contribution
 
-I appreciate reviews and criticism. If you find any errors (even a typo!) and/or want to improve something in the repository, and/or want to help document the project, feel free to create a pull request! :smile:.
+I appreciate reviews and criticism. Although this is not a conventional open-source project, if you find any errors (even a typo!) and/or want to improve something in the repository, and/or want to help document the project, feel free to create a pull request! :smile:.
 
 #### TODO:
 
