@@ -30,8 +30,8 @@ For my ease-of-use I uploaded the original dataset available on Github to Kaggle
 ## Models
 
 1. **Model 0** : A simple model with fully connected multiple Dense layers; this model acts as a baseline.
-1. **Model 1** : 2 pairs of CNN and MaxPool layers with a Flatten layer and Dense layer in the end for classification.
-1. **Model 2** : Multiple CNN layers, MaxPool layers with a Flatten layer and Dense layer in the end; _should get better results from this._
+1. **Model 1** : Multiple pairs of CNN and MaxPool layers with a Flatten layer and Dense layer in the end for classification.
+1. **Model 2** : Replicate best model from the research paper; _should get better results from this._
 1. **Model 3** : Using transfer learning, exploit ResNet model for classification.
 1. **Model 4** : Using transfer learning, exploit EfficientNetBx for classification.
 1. **Model 5** : Use fine-tuned ResNet model for classification.
@@ -50,7 +50,7 @@ Looking_Fruit/
 
 - _assets_ : various media materials which were helpful for the project.
 - _.gitignore_ : this file was used to make `git` not track certain private files.
-- _Looking_Fruit_nbk_ : jupyter/colab notebook used for this project. The notebook also describes the models and approach.
+- _Looking_Fruit_nbk.ipynb_ : jupyter/colab notebook used for this project. The notebook also describes the models and approach.
 - _README.md_ : documentation of the project.
 - _helper_functions.py_ : python script containing various utility functions which were used during the modelling experiments.
 
