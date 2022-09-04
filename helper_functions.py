@@ -53,4 +53,26 @@ def create_model_checkpoint(model_name: str, save_path: str="model_experiments")
     Returns:
         _type_: Keras Callback object
     """
-    return tf.keras.callbacks.ModelCheckpoint(filepath=os.path.join(save_path, model_name), verbose=0, save_best_only=True, save_weights_only=True)
+    return tf.keras.callbacks.ModelCheckpoint(filepath=os.path.join(save_path, model_name), verbose=1, save_best_only=True, save_weights_only=True)
+
+from sklearn.metrics import accuracy_score, precision_recall_fscore_support
+
+def get_metrics(y_true, y_pred):
+    """
+    Calculates model accuracy, precision, recall and f1 score of a binary classification model.
+
+    Args:
+        y_true: true labels in the form of a 1D array
+        y_pred: predicted labels in the form of a 1D array
+    Returns:
+        a dictionary of accuracy, precision, recall, f1-score.
+    """
+    # Calculate model accuracy
+    model_accuracy = accuracy_score(y_true, y_pred) * 100
+    # Calculate model precision, recall and f1 score using "weighted average
+    model_precision, model_recall, model_f1, _ = precision_recall_fscore_support(y_true, y_pred, average="weighted")
+    model_results = {"Accuracy": model_accuracy,
+                    "Precision": model_precision,
+                    "Recall": model_recall,
+                    "F1": model_f1}
+    return model_results
