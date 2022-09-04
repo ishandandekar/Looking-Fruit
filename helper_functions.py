@@ -38,3 +38,19 @@ def unzip_data(filename,data_dir="data"):
     zip_ref = zipfile.ZipFile(filename, "r")
     zip_ref.extractall(data_dir)
     zip_ref.close()
+
+import os
+import tensorflow as tf
+
+# Create a function to implement a ModelCheckpoint callback with a specific filename
+def create_model_checkpoint(model_name: str, save_path: str="model_experiments"):
+    """Used for making model checkpoint callback
+
+    Args:
+        model_name (str): Name of the model, functions creates a directory for the model of this name
+        save_path (str, optional): Main directory to store all weights. Defaults to "model_experiments".
+
+    Returns:
+        _type_: Keras Callback object
+    """
+    return tf.keras.callbacks.ModelCheckpoint(filepath=os.path.join(save_path, model_name), verbose=0, save_best_only=True, save_weights_only=True)
