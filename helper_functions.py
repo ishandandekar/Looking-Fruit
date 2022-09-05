@@ -74,5 +74,5 @@ def get_metrics(y_true, y_pred):
     model_results = {"Accuracy": model_accuracy,
                     "Precision": model_precision,
                     "Recall": model_recall,
-                    "F1": model_f1}
+                    "F1-score": model_f1}
     return model_results
