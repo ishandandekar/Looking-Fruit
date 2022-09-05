@@ -23,15 +23,15 @@ The original data for the paper was published and created by the researchers the
 The training data has around **400+ images for each class** (except Ginger Root). Although, the model would get generalised more on more data, but due to unnecessarily huge size of the dataset, it was trimmed for training the models better. Further, data augmentation was performed to make the model make better predictions on new images.
 The test data was kept separately untouched, and was used just to evaluate the models on unknown data. Each class had around **100+** images. This data was not augmented.
 
-For my ease-of-use I uploaded the original dataset available on Github to Kaggle, and used this for the project. Check out the dataset [here](https://www.kaggle.com/datasets/ishandandekar/fruitimagedataset) and do try making models yourself!
+For my ease-of-use I uploaded the original dataset available on Github to Kaggle, and used this for the project. Check out the dataset [here](https://www.kaggle.com/datasets/ishandandekar/fruitimagedataset) and do try making models yourself! During the modelling phase, it was observed that this much data was a little too excessive. Training data wqas then trimmed so that, each class has only **100** images.
 
 > :bulb: Check out the original dataset via : [Github](https://github.com/Horea94/Fruit-Images-Dataset) [Kaggle](https://www.kaggle.com/datasets/moltean/fruits)
 
 ## Models
 
-1. **Model 0** : A simple model with fully connected multiple Dense layers; this model acts as a baseline.
-1. **Model 1** : Multiple pairs of CNN and MaxPool layers with a Flatten layer and Dense layer in the end for classification.
-1. **Model 2** : Replicate best model from the research paper; _should get better results from this._
+1. **Model 0** : This is a simple model with fully connected multiple Dense layers; this model acts as a baseline. This model is made using only Dense layer. As known, an ANN is weak in classifying images. But, this acts as a good baseline. The model was trained for 10 epochs and used Adam optimizer to update weights. See [architecture](assets/meme.jpeg).
+1. **Model 1** : This model has multiple pairs of CNN and MaxPool layers with a Flatten layer and Dense layer in the end for classification. The model was trained for 10 epochs and used Adam optimizer to update weights. This model was expected to get much better results than the previous model.
+1. **Model 2** : This is the exact same model that researchers used in their program script. This was suppossed to get outstanding results on test set. _should get better results from this._
 1. **Model 3** : Using transfer learning, exploit ResNet model for classification.
 1. **Model 4** : Using transfer learning, exploit EfficientNetBx for classification.
 1. **Model 5** : Use fine-tuned ResNet model for classification.
@@ -60,9 +60,18 @@ I appreciate reviews and criticism. Although this is not a conventional open-sou
 
 #### TODO:
 
-- [ ] Make notebook
+- [x] Make notebook
 - [ ] Beautify notebook
-- [ ] Add 'Open in colab' button
+- [x] Add 'Open in colab' button
 - [x] Add dataset to Kaggle
 - [x] Beautify Kaggle dataset (desc etc.)
+- [ ] Run code
+- [ ] Get the architectures as images
+- [ ] Link the images to README.md
+- [ ] Get the metrics
+- [ ] Add individual metrics in the model's description (README)
+- [ ] Get the plots of the metrics
+- [ ] Show metrics plot in README.md
+- [ ] Get the best model among them
+- [ ] Update the contents of the reposritory part of README
 - [ ] Update README
