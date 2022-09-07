@@ -68,7 +68,9 @@ I appreciate reviews and criticism. Although this is not a conventional open-sou
 - [ ] Run code
 - [ ] Reshape y labels into (-1, 1)
 - [ ] Reshape all model preds classes into (-1, 1)
+- [ ] Check the get_metrics function, why is showing weird numbers (one accuracy was 1. something how tf?)
 - [ ] Get the architectures as images
+- [ ] Add `EarlyStopping` callback for each model having 25 epochs for training
 - [ ] Link the images to README.md
 - [ ] Get the metrics
 - [ ] Add individual metrics in the model's description (README)
