@@ -66,6 +66,8 @@ I appreciate reviews and criticism. Although this is not a conventional open-sou
 - [x] Add dataset to Kaggle
 - [x] Beautify Kaggle dataset (desc etc.)
 - [ ] Run code
+- [ ] Reshape y labels into (-1, 1)
+- [ ] Reshape all model preds classes into (-1, 1)
 - [ ] Get the architectures as images
 - [ ] Link the images to README.md
 - [ ] Get the metrics
