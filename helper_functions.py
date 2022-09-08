@@ -55,6 +55,18 @@ def create_model_checkpoint(model_name: str, save_path: str="model_experiments")
     """
     return tf.keras.callbacks.ModelCheckpoint(filepath=os.path.join(save_path, model_name), verbose=1, save_best_only=True, save_weights_only=True)
 
+def create_early_stopping(patience: int = 3, restore_best_weights: bool = True):
+    """Generates a EarlyStopping callback
+
+    Args:
+        patience (int, optional): Number of iterations to look for improvement. Defaults to 3.
+        restore_best_weights (bool, optional): Restore best weights. Defaults to True.
+
+    Returns:
+        _type_: Keras Callbacks object
+    """
+    return tf.keras.callbacks.EarlyStopping(patience = patience, restore_best_weights = restore_best_weights)
+
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 
 def get_metrics(y_true, y_pred):
