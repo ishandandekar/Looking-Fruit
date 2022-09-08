@@ -1,10 +1,10 @@
-# Looking-Fruit
+# Looking_Fruit
 
 <p align="center">
     <img width=300 height=170 src="assets/meme.jpeg">
 </p>
 
-:wave: Hello and welcome to the **Looking-Fruit :apple:** code repository. This is a short and simple computer vision project. In this project, I replicate and try to improve the models used to classify images of fruits. You can see the research paper [here](https://www.researchgate.net/publication/321475443_Fruit_recognition_from_images_using_deep_learning). The original code repository can be found [here](https://github.com/Horea94/Fruit-Images-Dataset). This is my first independant paper replication project :smile:.
+:wave: Hello and welcome to the **Looking_Fruit :apple:** code repository. This is a short and simple computer vision project. In this project, I replicate and try to improve the models used to classify images of fruits. You can see the research paper [here](https://www.researchgate.net/publication/321475443_Fruit_recognition_from_images_using_deep_learning). The original code repository can be found [here](https://github.com/Horea94/Fruit-Images-Dataset). This is my first independant paper replication project :smile:.
 
 ## Introduction
 
@@ -25,57 +25,51 @@ The test data was kept separately untouched, and was used just to evaluate the m
 
 For my ease-of-use I uploaded the original dataset available on Github to Kaggle, and used this for the project. Check out the dataset [here](https://www.kaggle.com/datasets/ishandandekar/fruitimagedataset) and do try making models yourself! During the modelling phase, it was observed that this much data was a little too excessive. Training data wqas then trimmed so that, each class has only **100** images.
 
-> :bulb: Check out the original dataset via : [Github](https://github.com/Horea94/Fruit-Images-Dataset) [Kaggle](https://www.kaggle.com/datasets/moltean/fruits)
+> Note: You can also check out the original dataset on [Github](https://github.com/Horea94/Fruit-Images-Dataset) or [Kaggle](https://www.kaggle.com/datasets/moltean/fruits)
 
 ## Models
 
-1. **Model 0** : This is a simple model with fully connected multiple Dense layers; this model acts as a baseline. This model is made using only Dense layer. As known, an ANN is weak in classifying images. But, this acts as a good baseline. The model was trained for 10 epochs and used Adam optimizer to update weights. See [architecture](assets/meme.jpeg).
-1. **Model 1** : This model has multiple pairs of CNN and MaxPool layers with a Flatten layer and Dense layer in the end for classification. The model was trained for 10 epochs and used Adam optimizer to update weights. This model was expected to get much better results than the previous model.
-1. **Model 2** : This is the exact same model that researchers used in their program script. This was suppossed to get outstanding results on test set. _should get better results from this._
-1. **Model 3** : Using transfer learning, exploit ResNet model for classification.
-1. **Model 4** : Using transfer learning, exploit EfficientNetBx for classification.
-1. **Model 5** : Use fine-tuned ResNet model for classification.
-1. **Model 6** : Use fine-tuned EfficientNetBx for classification.
+1. **Model 0** : This is a simple model with fully connected multiple Dense layers; this model acts as a baseline. This model is made using only Dense layer. As known, an ANN is weak in classifying images. But, this acts as a good baseline. The model was trained for 10 epochs and used Adam optimizer to update weights. See [architecture](assets/model_0.png).
+1. **Model 1** : This model has multiple pairs of CNN and MaxPool layers with a Flatten layer and Dense layer in the end for classification. The model was trained for 10 epochs and used Adam optimizer to update weights. This model was expected to get much better results than the previous model. See [architecture](assets/model_1.png).
+1. **Model 2** : This is the exact same model that researchers used in their program script. This was suppossed to get outstanding results on test set. The model included multiple pairs of `Conv2D` and `MaxPool` layers to perform convolutional operations. In the bottom layers, it has 2 `Dense` layers, each followed by a `Dropout` layer. This was added to further add randomness to predictions. A final `Dense` layer is used to classify the inputs. See [architecture](assets/model_2.png).
+1. **Model 3** : This model uses **ResNet50** as its base. Using transfer learning, to exploit other models parameters can be a useful tool. ResNet model required to the image tensors to be scaled between 0 and 1. The model consists of 5 layers. The `Input` layer confirms and transforms the tensors into the specified shape. The `Rescaling` layer scales the numbers into 0 to 1. Then the ResNet model does its work. A `GlobalAveragePooling` layer is used to decrease the count of numbers. A final `Dense` layer then classifies the tensors into categories. See [architecture](assets/model_3.png).
+1. **Model 4** : Unlike the previous model, this one uses **EfficientNetB0** under the hood. Using a different architecture could be benefitial. By default, `EfficientNetB0` does not need the input tensors to be scaled between 0 and 1. The model has a total of 4 layers. The `Input` layer confirms and transforms the input tensors into the required shape. Then comes the `EfficientNetB0` model and does various convolutional operations. The `GlobalAveragePooling` layer then condenses the tensors into a (1,3) tensor by taking average. The final `Dense` layer then classifies the tensors into categories. See [architecture](assets/model_4.png).
+1. **Model 5** : This model uses a **fine-tuned ResNet50** as its base. Model 3 used ResNet50 as its base. Although, the model didn't actually learn anything. The parameters were frozen i.e. these did not change when the model was training. Fine-tuning these models make the models train and learn the features in our dataset. The bottom ten layers were set so that their parameters can be changed and can adapt to the dataset. This model is same as model 3, the only difference being that now the ResNet model can also change its parameters and adapt on the training examples to give better and more accuracte predictions. See [architecture](assets/model_5.png).
+1. **Model 6** : This model uses a **fine-tuned EfficientNetB0** under its hood. The model's last ten layers have been set in such a way that their parameters can be trained and changed according to the training examples. This helps to give better and more accurate predictions. This model is same as model 4, the only difference being that now the parameters within the base model can now be trained too. See [architecture](assets/model_6.png).
 
 ## Contents of the repository
 
 ```
 Looking_Fruit/
 ├─ assets/
+├─ models/
+├─ notebooks/
+├─ scripts/
 ├─ .gitignore
-├─ Looking_Fruit_nbk.ipynb
+├─ LICENSE.md
 ├─ README.md
-├─ helper_functions.py
 ```
 
-- _assets_ : various media materials which were helpful for the project.
-- _.gitignore_ : this file was used to make `git` not track certain private files.
-- _Looking_Fruit_nbk.ipynb_ : jupyter/colab notebook used for this project. The notebook also describes the models and approach.
-- _README.md_ : documentation of the project.
-- _helper_functions.py_ : python script containing various utility functions which were used during the modelling experiments.
+- _assets_ : Contains various media materials which were helpful for the project and its documentation.
+- _models_ : Contains all the models created during experimentation.
+- _notebooks_ : Contains all the notebooks used for the analysis of the dataset and making models for predictions.
+- _scripts_ : Contains various program scripts required during modelling experiments and analysis.
+- _.gitignore_ : File was used to make `git` not track certain private files.
 
 ## Contribution
 
-I appreciate reviews and criticism. Although this is not a conventional open-source project, if you find any errors (even a typo!) and/or want to improve something in the repository, and/or want to help document the project, feel free to create a pull request! :smile:.
+I appreciate reviews and criticism. Although this is not a conventional open-source project, if you find any errors (even a typo!) and/or want to improve something in the repository, and/or want to help document the project, feel free to create a pull request! :smile:
+
+If you encounter any errors or see any mistake in anything, make sure to add it as an issue in the Issues tab on this repository's Github page.  
+A special thanks to all the researchers behind this paper.
 
 #### TODO:
 
-- [x] Make notebook
-- [ ] Beautify notebook
-- [x] Add 'Open in colab' button
-- [x] Add dataset to Kaggle
-- [x] Beautify Kaggle dataset (desc etc.)
-- [x] Run code
-- [x] Reshape y labels into (-1, 1)
-- [x] Reshape all model preds classes into (-1, 1)
 - [ ] Fix metrics functions
-- [x] Get the architectures as images
-- [x] Add `EarlyStopping` callback for each model having 25 epochs for training
-- [ ] Link the images to README.md
 - [ ] Get the metrics
 - [ ] Add individual metrics in the model's description (README)
-- [ ] Get the plots of the metrics
 - [ ] Fix metrics plot in the notebook
-- [ ] Get the best model among them
-- [ ] Update the contents of the reposritory part of README
+- [ ] Get the plots of the metrics
+- [ ] Get all the models
+- [ ] Update the contents of the repository part of README
 - [ ] Update README
