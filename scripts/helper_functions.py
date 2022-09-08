@@ -1,6 +1,7 @@
+from typing import Dict
 import matplotlib.pyplot as plt
 
-def plot_loss_curves(history):
+def plot_loss_curves(history) -> None:
     """
     Shows separate loss curves for training and validation metrics.
 
@@ -29,7 +30,7 @@ def plot_loss_curves(history):
 
 import zipfile
 
-def unzip_data(filename,data_dir="data"):
+def unzip_data(filename,data_dir="data") -> None:
     """
     Unzips filename into the current working directory.
     Args:
@@ -69,7 +70,7 @@ def create_early_stopping(patience: int = 3, restore_best_weights: bool = True):
 
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 
-def get_metrics(y_true, y_pred):
+def get_metrics(y_true, y_pred) -> Dict:
     """
     Calculates model accuracy, precision, recall and f1 score of a binary classification model.
 
@@ -80,6 +81,10 @@ def get_metrics(y_true, y_pred):
         a dictionary of accuracy, precision, recall, f1-score.
     """
     # Calculate model accuracy
+
+    if y_true.shape != y_pred.shape:
+        raise Exception(f"Shape mismatch error: y_true - {y_true.shape}, y_pred - {y_pred.shape}")
+
     model_accuracy = accuracy_score(y_true, y_pred) * 100
     # Calculate model precision, recall and f1 score using "weighted average
     model_precision, model_recall, model_f1, _ = precision_recall_fscore_support(y_true, y_pred, average="weighted")
