@@ -4,12 +4,12 @@
     <img width=300 height=170 src="assets/meme.jpeg">
 </p>
 
-:wave: Hello and welcome to the **Looking_Fruit :apple:** code repository. This is a short and simple computer vision project. In this project, I replicate and try to improve the models used to classify images of fruits. You can see the research paper [here](https://www.researchgate.net/publication/321475443_Fruit_recognition_from_images_using_deep_learning). The original code repository can be found [here](https://github.com/Horea94/Fruit-Images-Dataset). This is my first independant paper replication project :smile:.
+:wave: Hello and welcome to the **Looking_Fruit :apple:** code repository. This is a short and simple computer vision project. In this project, I replicate and try to improve the models used to classify images of fruits. You can see the research paper [here](https://www.researchgate.net/publication/321475443_Fruit_recognition_from_images_using_deep_learning). The original code repository can be found [here](https://github.com/Horea94/Fruit-Images-Dataset). This is my first independant paper replication project :smile:.  
+If you encounter any errors while running the notebook yourself, make sure to add it as an issue in the Issues tab of the repository's Github page.
 
 ## Introduction
 
-Computer Vision domain has always been my curiosity. I thought paper replication was a great start to then replicate state-of-the-art models like ResNets.
-The **objective** of the research paper was to classify images various fruits and vegetables correctly. The researchers made a total of 10 models based and documented there results. The main of this project is to beat and/or achieve the highest score on the test set when compared to their best model.
+The **objective** of the research paper was to classify images various fruits and vegetables correctly. The researchers made a total of 10 models based and documented there results. The main of this project is to beat and/or achieve the highest score on the test set when compared to their best model. In the process to do this, I made a total of 7 models (including the best model researchers made), hoping each model iteration will get a better result.
 
 **Abstract of the paper:**  
 In this paper we introduce a new, high-quality, dataset of images
@@ -23,7 +23,7 @@ The original data for the paper was published and created by the researchers the
 The training data has around **400+ images for each class** (except Ginger Root). Although, the model would get generalised more on more data, but due to unnecessarily huge size of the dataset, it was trimmed for training the models better. Further, data augmentation was performed to make the model make better predictions on new images.
 The test data was kept separately untouched, and was used just to evaluate the models on unknown data. Each class had around **100+** images. This data was not augmented.
 
-For my ease-of-use I uploaded the original dataset available on Github to Kaggle, and used this for the project. Check out the dataset [here](https://www.kaggle.com/datasets/ishandandekar/fruitimagedataset) and do try making models yourself! During the modelling phase, it was observed that this much data was a little too excessive. Training data wqas then trimmed so that, each class has only **100** images.
+For my ease-of-use I uploaded the original dataset available on Github to Kaggle, and used this for the project. Check out the dataset [here](https://www.kaggle.com/datasets/ishandandekar/fruitimagedataset) and do try making models yourself! During the modelling phase, it was observed that this much data was a little too excessive. Training data was then trimmed so that, each class only has **100** images.
 
 > Note: You can also check out the original dataset on [Github](https://github.com/Horea94/Fruit-Images-Dataset) or [Kaggle](https://www.kaggle.com/datasets/moltean/fruits)
 
@@ -60,8 +60,7 @@ Looking_Fruit/
 
 I appreciate reviews and criticism. Although this is not a conventional open-source project, if you find any errors (even a typo!) and/or want to improve something in the repository, and/or want to help document the project, feel free to create a pull request! :smile:
 
-If you encounter any errors or see any mistake in anything, make sure to add it as an issue in the Issues tab on this repository's Github page.  
-A special thanks to all the researchers behind this paper.
+If you encounter any errors or see any mistake in anything, make sure to add it as an issue in the Issues tab on this repository's Github page. A special thanks to all the researchers behind this paper.
 
 #### TODO:
 
