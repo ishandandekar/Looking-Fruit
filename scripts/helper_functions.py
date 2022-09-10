@@ -11,8 +11,8 @@ def plot_loss_curves(history) -> None:
 
     loss = history.history['loss']
     val_loss = history.history['val_loss']
-    accuracy = history.history['accuracy']
-    val_accuracy = history.history['val_accuracy']
+    accuracy = history.history['categorical_accuracy']
+    val_accuracy = history.history['val_categorical_accuracy']
     epochs = range(len(history.history['loss']))
     # Plot loss
     plt.plot(epochs, loss, label='training_loss')
