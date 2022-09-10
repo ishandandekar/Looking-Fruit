@@ -87,7 +87,7 @@ def get_metrics(y_true, y_pred) -> Dict:
 
     model_accuracy = accuracy_score(y_true, y_pred) * 100
     # Calculate model precision, recall and f1 score using "weighted average
-    model_precision, model_recall, model_f1, _ = precision_recall_fscore_support(y_true, y_pred, average="weighted")
+    model_precision, model_recall, model_f1, _ = precision_recall_fscore_support(y_true, y_pred, average="micro")
     model_results = {"Accuracy": model_accuracy,
                     "Precision": model_precision,
                     "Recall": model_recall,
