@@ -68,9 +68,8 @@ def create_early_stopping(patience: int = 3, restore_best_weights: bool = True):
     """
     return tf.keras.callbacks.EarlyStopping(patience = patience, restore_best_weights = restore_best_weights)
 
-from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 
-def get_metrics(y_true, y_pred) -> Dict:
+def get_metrics(loss, accuracy, precision, recall) -> Dict:
     """
     Calculates model accuracy, precision, recall and f1 score of a binary classification model.
 
@@ -82,14 +81,12 @@ def get_metrics(y_true, y_pred) -> Dict:
     """
     # Calculate model accuracy
 
-    if y_true.shape != y_pred.shape:
-        raise Exception(f"Shape mismatch error: y_true - {y_true.shape}, y_pred - {y_pred.shape}")
 
-    model_accuracy = accuracy_score(y_true, y_pred) * 100
-    # Calculate model precision, recall and f1 score using "weighted average
-    model_precision, model_recall, model_f1, _ = precision_recall_fscore_support(y_true, y_pred, average="micro")
-    model_results = {"Accuracy": model_accuracy,
-                    "Precision": model_precision,
-                    "Recall": model_recall,
-                    "F1-score": model_f1}
+    model_results = {
+        "Loss": loss,
+        "Accuracy": accuracy,
+        "Precision": precision,
+        "Recall": recall,
+        "F1-score": (precision+recall)/(2*precision*recall)
+    }
     return model_results
