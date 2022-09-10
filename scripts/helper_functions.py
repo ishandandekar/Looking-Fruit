@@ -84,7 +84,7 @@ def get_metrics(loss, accuracy, precision, recall) -> Dict:
 
     model_results = {
         "Loss": loss,
-        "Accuracy": accuracy,
+        "Accuracy": accuracy*100,
         "Precision": precision,
         "Recall": recall,
         "F1-score": (precision+recall)/(2*precision*recall)
