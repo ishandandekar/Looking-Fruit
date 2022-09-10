@@ -64,10 +64,7 @@ If you encounter any errors or see any mistake in anything, make sure to add it 
 
 #### TODO:
 
-- [ ] Fix metrics functions
-- [ ] Get the metrics
 - [ ] Add individual metrics in the model's description (README)
-- [ ] Fix metrics plot in the notebook
 - [ ] Get the plots of the metrics
 - [ ] Get all the models
 - [ ] Update the contents of the repository part of README
