@@ -1,5 +1,7 @@
 # Looking_Fruit
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ishandandekar/Looking-Fruit/blob/main/Looking_Fruit_nbk.ipynb)
+
 <p align="center">
     <img width=400 height=220 src="assets/meme.jpeg">
 </p>
