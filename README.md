@@ -1,7 +1,7 @@
 # Looking_Fruit
 
 <p align="center">
-    <img width=300 height=170 src="assets/meme.jpeg">
+    <img width=400 height=220 src="assets/meme.jpeg">
 </p>
 
 :wave: Hello and welcome to the **Looking_Fruit :apple:** code repository. This is a short and simple computer vision project. In this project, I replicate and try to improve the models used to classify images of fruits. You can see the research paper [here](https://www.researchgate.net/publication/321475443_Fruit_recognition_from_images_using_deep_learning). The original code repository can be found [here](https://github.com/Horea94/Fruit-Images-Dataset). This is my first independant paper replication project :smile:.  
@@ -38,7 +38,7 @@ For my ease-of-use I uploaded the original dataset available on Github to Kaggle
 1. **Model 6** : This model uses a **fine-tuned EfficientNetB0** under its hood. The model's last ten layers have been set in such a way that their parameters can be trained and changed according to the training examples. This helps to give better and more accurate predictions. This model is same as model 4, the only difference being that now the parameters within the base model can now be trained too. Model 4 performed really well on the test set. Fine-tuning would only better the results. The model got an accuracy of 95%, precision of 0.97 and recall as 0.95. See [architecture](assets/model_6.png).
 
 <p align="center">
-    <img width=600 height=400 src="assets/metrics_plot.png">
+    <img width=900 height=600 src="assets/metrics_plot.png">
 </p>
 
 ## Contents of the repository
@@ -65,9 +65,3 @@ Looking_Fruit/
 Although this is not a conventional open-source project, if you find any errors (even a typo!) and/or want to improve something in the repository, and/or want to help document the project, feel free to create a pull request! :smile:
 
 If you encounter any errors or see any mistake in anything, make sure to add it as an issue in the Issues tab on this repository's Github page. A special thanks to all the researchers behind this paper.
-
-#### TODO:
-
-- [ ] Add individual metrics in the model's description (README)
-- [ ] Update README
-- [ ] One final run of the notebook and download and final push to end the project and remove TODO part of the README
