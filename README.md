@@ -66,4 +66,4 @@ Looking_Fruit/
 
 Although this is not a conventional open-source project, if you find any errors (even a typo!) and/or want to improve something in the repository, and/or want to help document the project, feel free to create a pull request! :smile:
 
-If you encounter any errors or see any mistake in anything, make sure to add it as an issue in the Issues tab on this repository's Github page. A special thanks to all the researchers behind this paper.
+A special thanks to all the researchers behind this paper.
