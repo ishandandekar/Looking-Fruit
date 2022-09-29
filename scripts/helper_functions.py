@@ -1,7 +1,8 @@
 from typing import Dict
 import matplotlib.pyplot as plt
+import tensorflow as tf
 
-def plot_loss_curves(history) -> None:
+def plot_loss_curves(history: tf.keras.callbacks.History) -> None:
     """
     Shows separate loss curves for training and validation metrics.
 
@@ -30,7 +31,7 @@ def plot_loss_curves(history) -> None:
 
 import zipfile
 
-def unzip_data(filename,data_dir="data") -> None:
+def unzip_data(filename: str,data_dir="data") -> None:
     """
     Unzips filename into the current working directory.
     Args:
@@ -44,7 +45,7 @@ import os
 import tensorflow as tf
 
 # Create a function to implement a ModelCheckpoint callback with a specific filename
-def create_model_checkpoint(model_name: str, save_path: str="model_experiments"):
+def create_model_checkpoint(model_name: str, save_path: str="model_experiments") -> tf.keras.callbacks.ModelCheckpoint:
     """Used for making model checkpoint callback
 
     Args:
@@ -52,11 +53,11 @@ def create_model_checkpoint(model_name: str, save_path: str="model_experiments")
         save_path (str, optional): Main directory to store all weights. Defaults to "model_experiments".
 
     Returns:
-        _type_: Keras Callback object
+        _type_: tensorflow.keras.callbacks.ModelCheckpoint
     """
     return tf.keras.callbacks.ModelCheckpoint(filepath=os.path.join(save_path, model_name), verbose=1, save_best_only=True, save_weights_only=True)
 
-def create_early_stopping(patience: int = 3, restore_best_weights: bool = True):
+def create_early_stopping(patience: int = 3, restore_best_weights: bool = True) -> tf.keras.callbacks.EarlyStopping:
     """Generates a EarlyStopping callback
 
     Args:
