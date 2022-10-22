@@ -11,7 +11,7 @@ If you encounter any errors while running the notebook yourself, make sure to ad
 
 ## Introduction
 
-The **objective** of the research paper was to classify images various fruits and vegetables correctly. The researchers made a total of 10 models based and documented there results. The main of this project is to beat and/or achieve the highest score on the test set when compared to their best model. In the process to do this, I made a total of 7 models (including the best model researchers made), hoping each model iteration will get a better result.
+The **objective** of the research paper was to classify images various fruits correctly. The researchers made a total of 10 models based and documented there results. The main idea of this project is to beat and/or achieve the highest score on the test set when compared to their best model. In the process to do this, I made a total of 7 models (including the best model researchers made), hoping each model iteration will get a better result.
 
 **Abstract of the paper:**  
 In this paper we introduce a new, high-quality, dataset of images
