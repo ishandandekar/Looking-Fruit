@@ -65,7 +65,7 @@ def create_early_stopping(patience: int = 3, restore_best_weights: bool = True) 
         restore_best_weights (bool, optional): Restore best weights. Defaults to True.
 
     Returns:
-        _type_: Keras Callbacks object
+        _type_: tf.keras.callbacks.EarlyStopping
     """
     return tf.keras.callbacks.EarlyStopping(patience = patience, restore_best_weights = restore_best_weights)
 
