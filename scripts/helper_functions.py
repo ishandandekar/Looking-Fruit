@@ -46,26 +46,26 @@ import tensorflow as tf
 
 # Create a function to implement a ModelCheckpoint callback with a specific filename
 def create_model_checkpoint(model_name: str, save_path: str="model_experiments") -> tf.keras.callbacks.ModelCheckpoint:
-    """Used for making model checkpoint callback
+    """Returns a model checkpoint callback
 
     Args:
         model_name (str): Name of the model, functions creates a directory for the model of this name
         save_path (str, optional): Main directory to store all weights. Defaults to "model_experiments".
 
     Returns:
-        _type_: tensorflow.keras.callbacks.ModelCheckpoint
+        tf.keras.callbacks.ModelCheckpoint: A callback to get the best weights configuration according to the training.
     """
     return tf.keras.callbacks.ModelCheckpoint(filepath=os.path.join(save_path, model_name), verbose=1, save_best_only=True, save_weights_only=True)
 
 def create_early_stopping(patience: int = 3, restore_best_weights: bool = True) -> tf.keras.callbacks.EarlyStopping:
-    """Generates a EarlyStopping callback
+    """Returns a EarlyStopping callback
 
     Args:
         patience (int, optional): Number of iterations to look for improvement. Defaults to 3.
         restore_best_weights (bool, optional): Restore best weights. Defaults to True.
 
     Returns:
-        _type_: tf.keras.callbacks.EarlyStopping
+        tf.keras.callbacks.EarlyStoppin: A callback to stop training if the validation loss does not decrease.
     """
     return tf.keras.callbacks.EarlyStopping(patience = patience, restore_best_weights = restore_best_weights)
 
@@ -78,10 +78,9 @@ def get_metrics(loss, accuracy, precision, recall) -> Dict:
         y_true: true labels in the form of a 1D array
         y_pred: predicted labels in the form of a 1D array
     Returns:
-        a dictionary of accuracy, precision, recall, f1-score.
+        Dict: a dictionary of accuracy, precision, recall, f1-score.
     """
     # Calculate model accuracy
-
 
     model_results = {"Loss": loss,
         "Accuracy": accuracy,
